@@ -1,3 +1,5 @@
-module KnifeJoyent
-  VERSION = "0.0.10"
+module Knife
+	module Joyent
+  	VERSION = "0.0.10"
+	end
 end

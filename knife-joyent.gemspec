@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
-$:.unshift File.expand_path("../lib", __FILE__)
+$:.push File.expand_path("../lib", __FILE__)
 require 'knife-joyent/version'
 
 Gem::Specification.new do |s|
   s.name = "knife-joyent"
-  s.version = KnifeJoyent::VERSION
+  s.version = Knife::Joyent::VERSION
   s.has_rdoc = true
   s.authors = ["Kevin Chan"]
   s.email = ["kevin@joyent.com"]
@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.add_dependency "fog", "~> 1.3"
-  s.add_dependency "chef", "~> 0.10"
+  s.add_dependency "fog", "~> 1.6"
+  s.add_dependency "chef", ">= 0.10.10"
   s.require_paths = ["lib"]
 
 end
